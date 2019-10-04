@@ -1,10 +1,13 @@
 import React from 'react';
 import WorldCupTrendsContainer from './components/WorldCupTrendsContainer';
+import NavBar from './components/Navbar';
 
 function App() {
   return (
     <>
-      <header></header>
+      <header>
+        <NavBar />
+      </header>
       <main>
         <WorldCupTrendsContainer />
       </main>
