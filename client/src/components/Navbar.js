@@ -1,8 +1,11 @@
 import React from 'react';
+import { useDarkMode } from '../hooks/useDarkMode';
 
 const NavBar = () => {
-  const handleDarkMode = e => {
-    console.log('handleDarkMode, ', e.target.checked);
+  const [darkMode, setDarkMode] = useDarkMode(false);
+
+  const handleDarkMode = () => {
+    setDarkMode(!darkMode);
   };
 
   return (
@@ -10,7 +13,7 @@ const NavBar = () => {
       <nav>
         <h1>World Cup Data Trends</h1>
       </nav>
-      <input type='checkbox' name='darkmode' onClick={e => handleDarkMode(e)} />
+      <input type='checkbox' name='darkmode' onClick={handleDarkMode} defaultChecked={darkMode} />
     </div>
   );
 };
