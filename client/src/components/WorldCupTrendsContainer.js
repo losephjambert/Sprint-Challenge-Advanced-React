@@ -45,11 +45,18 @@ export default class WorldCupTrendsContainer extends Component {
 
   render() {
     const { players, error } = this.state;
+    const errorMessage = (
+      <>
+        <p>Uh, oh. There was an error fetching the World Cup data.</p>
+        <p>Error message: {error}</p>
+      </>
+    );
 
     return (
       <>
         <h2>Players</h2>
         <section>
+          {error && errorMessage}
           {players.map(player => (
             <PlayerCard key={player.id} {...player} />
           ))}
