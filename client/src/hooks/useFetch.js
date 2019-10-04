@@ -18,7 +18,7 @@ const asyncFetch = async url => {
 
 export const useAsyncFetch = url => {
   const [response, setResponse] = useState({
-    data: null,
+    data: [],
     error: null,
   });
 
@@ -35,5 +35,5 @@ export const useAsyncFetch = url => {
     console.log('fetch next page', url);
   };
 
-  return [response, fetchNextPage];
+  return [response.data, response.error, fetchNextPage];
 };
