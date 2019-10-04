@@ -13,7 +13,10 @@ const NavBar = () => {
       <nav>
         <h1>World Cup Data Trends</h1>
       </nav>
-      <input type='checkbox' name='darkmode' onClick={handleDarkMode} defaultChecked={darkMode} />
+      <div>
+        <input type='checkbox' id='darkmodeInput' name='darkmode' onClick={handleDarkMode} defaultChecked={darkMode} />
+        <label htmlFor='darkmodeInput'>Darkmode</label>
+      </div>
     </div>
   );
 };
