@@ -1,5 +1,6 @@
 import React from 'react';
 import WorldCupTrendsContainer from './components/WorldCupTrendsContainer';
+import HooksWorldCupTrendsContainer from './components/Hooks.WorldCupTrendsContainer';
 import NavBar from './components/Navbar';
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
         <NavBar />
       </header>
       <main>
-        <WorldCupTrendsContainer />
+        <HooksWorldCupTrendsContainer />
+        {/* <WorldCupTrendsContainer /> */}
       </main>
       <footer></footer>
     </>
