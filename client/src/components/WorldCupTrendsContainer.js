@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import PlayerCard from './PlayerCard';
+
 import * as urls from '../api/urls';
 
 const getDataAsync = async url => {
@@ -41,9 +44,16 @@ export default class WorldCupTrendsContainer extends Component {
   }
 
   render() {
+    const { players, error } = this.state;
+
     return (
       <>
         <h2>Players</h2>
+        <section>
+          {players.map(player => (
+            <PlayerCard key={player.id} {...player} />
+          ))}
+        </section>
       </>
     );
   }
