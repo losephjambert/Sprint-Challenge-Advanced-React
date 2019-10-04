@@ -1,10 +1,13 @@
 import React from 'react';
+import WorldCupTrendsContainer from './components/WorldCupTrendsContainer';
 
 function App() {
   return (
     <>
       <header></header>
-      <main></main>
+      <main>
+        <WorldCupTrendsContainer />
+      </main>
       <footer></footer>
     </>
   );
