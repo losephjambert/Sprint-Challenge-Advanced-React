@@ -3,10 +3,10 @@ import React from 'react';
 const PlayerCard = ({ name, country, searches }) => {
   return (
     <figure>
-      <h3>{name}</h3>
-      <p>{country}</p>
+      <h3 data-testid='player-name'>{name}</h3>
+      <p data-testid='player-country'>{country}</p>
       <p>
-        Searches: <span>{searches}</span>
+        Searches: <span data-testid='player-searches'>{searches}</span>
       </p>
     </figure>
   );
